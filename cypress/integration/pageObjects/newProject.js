@@ -12,8 +12,11 @@ class Project {
     projectNextBtn(){
         return cy.get('.MuiToolbar-root > .MuiButton-root > .MuiButton-label')
     }
-    projectSearchInput(){
-        return cy.get('')
+    projectAddData(){
+        return cy.contains('Example Nature Dataset').parents('tr').find('button')
+    }
+    projectNextBtnStepTwo(){
+        return cy.get('.MuiButton-contained').contains('Next')
     }
 
    
