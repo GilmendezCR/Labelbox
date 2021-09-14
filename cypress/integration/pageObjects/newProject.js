@@ -12,11 +12,32 @@ class Project {
     projectNextBtn(){
         return cy.get('.MuiToolbar-root > .MuiButton-root > .MuiButton-label')
     }
+    projectNextBtnStepTwo(){
+        return cy.get('.MuiButton-contained').contains('Next')
+    }
+    projectNextBtnStepThree(){
+        return cy.contains('Next')
+    }
+    projectFinishBtn(){
+        return cy.contains('Finish')
+    }
     projectAddData(){
         return cy.contains('Example Nature Dataset').parents('tr').find('button')
     }
-    projectNextBtnStepTwo(){
-        return cy.get('.MuiButton-contained').contains('Next')
+    editorSetup(){
+        return cy.contains('Setup') 
+    }
+    editorConfirmButton(){
+        return cy.contains('Confirm')
+    }
+    settingstab(){
+        return cy.contains('Settings')
+    }
+    EraseProject(){
+        cy.contains('Danger zone').click()
+        cy.contains('Delete project').click()
+        cy.contains('Confirm').click()
+        return this
     }
 
    
