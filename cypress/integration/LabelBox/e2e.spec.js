@@ -10,18 +10,21 @@ beforeEach(()=>{
 })
     it('User is able to log in successfully', () => {
     })
-    it('User is able to create a new project',() => {
+    it('User is able to create a new project',  async () => {
         project.newProjectButton().click()
         project.projectInfoName().type('Adding a new project')
         project.projectInfoDescription().type('Adding a description for my new project')
         project.projectNextBtn().click()
         project.projectAddData().click()
         project.projectNextBtnStepTwo().click()
-        
+        project.editorSetup().click()
+        project.editorConfirmButton().click()
+        project.projectNextBtnStepThree().click()
+        project.projectFinishBtn().click()
+        project.settingstab().click()
+        project.EraseProject()
     })
-
-
-
+   
 
 })
 
