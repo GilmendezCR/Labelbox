@@ -32,8 +32,16 @@ class Project {
     }
     settingstab(){
         return cy.contains('Settings')
+        
     }
-    EraseProject(){
+    settingsLabelEditor(){
+         cy.contains('Label editor').click()
+         cy.wait(3000)
+         cy.get('.MuiButton-label').contains('Edit').click()
+         return this
+
+    }
+    eraseProject(){
         cy.contains('Danger zone').click()
         cy.contains('Delete project').click()
         cy.contains('Confirm').click()
